@@ -20,7 +20,7 @@ do not yet point to anything.
 Example:
 ```cpp
 double* gpaPtr = nullptr;
-if (gpaPtr != nullptr) {
+if(gpaPtr != nullptr) {
     *gpaPtr = 3.7;
 }
 ```
@@ -41,9 +41,9 @@ Your program will accept the student list capacity from the command line. C++
 provides argc (argument count) and argv (argument values). argv is an array
 of C-style strings, so you must convert the string to an integer with std::stoi.
 ```cpp
-int main (int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     if (argc < 2) {
-        std::cout << "Usage : ./program <capacity>" << std::endl;
+        std::cout << "Usage: ./program <capacity>" << std::endl;
         return 1;
 }
     int capacity = std::stoi(argv[1]);
