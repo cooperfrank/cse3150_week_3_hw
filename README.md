@@ -54,10 +54,10 @@ int main ( int argc , char * argv []) {
 ### Specifications
 1. Store student names and GPAs in two parallel arrays of size capacity.
 2. Implement the following functions:
- - `void addStudent(char* name, double gpa, char* names[], double gpas[], int& size, int capacity);`
- - `void updateGPA(double* gpaPtr, double newGpa);`
- - `void printStudent(const char* name, const double& gpa);`
- - `double averageGPA(const double gpas[], int size);`
+ 1. `void addStudent(char* name, double gpa, char* names[], double gpas[], int& size, int capacity);`
+ 2. `void updateGPA(double* gpaPtr, double newGpa);`
+ 3. `void printStudent(const char* name, const double& gpa);`
+ 4. `double averageGPA(const double gpas[], int size);`
 3. In `main()`, implement a menu with switch and if/else. Always use braces for control flow statements.
 4. Use `static cast<int>` when printing the average GPA to show the rounded integer value.
 5. Catch exceptions for adding when full or computing average with no students, and print the error string.
