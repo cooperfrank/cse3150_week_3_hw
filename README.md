@@ -21,7 +21,7 @@ Example:
 ```cpp
 double* gpaPtr = nullptr;
 if (gpaPtr != nullptr) {
-  *gpaPtr = 3.7;
+    *gpaPtr = 3.7;
 }
 ```
 
@@ -30,9 +30,9 @@ Exceptions in C++ can be any type. In this assignment, you will throw exceptions
 as strings and catch them with catch(const char* msg).
 ```cpp
 try {
-  double avg = averageGPA (gpas , size);
+    double avg = averageGPA (gpas , size);
 } catch (const char* msg) {
-  std :: cout << msg << std :: endl;
+    std :: cout << msg << std :: endl;
 }
 ```
 
@@ -42,22 +42,22 @@ provides argc (argument count) and argv (argument values). argv is an array
 of C-style strings, so you must convert the string to an integer with std::stoi.
 ```cpp
 int main ( int argc , char * argv []) {
-  if (argc < 2) {
-    std :: cout << "Usage : ./program <capacity>" << std :: endl;
-    return 1;
+    if (argc < 2) {
+        std :: cout << "Usage : ./program <capacity>" << std :: endl;
+        return 1;
 }
-  int capacity = std :: stoi ( argv [1]);
-  // now use capacity instead of hardcoded value
+    int capacity = std :: stoi ( argv [1]);
+    // now use capacity instead of hardcoded value
 }
 ```
 
 ### Specifications
 1. Store student names and GPAs in two parallel arrays of size capacity.
 2. Implement the following functions:
- 1. `void addStudent(char* name, double gpa, char* names[], double gpas[], int& size, int capacity);`
- 2. `void updateGPA(double* gpaPtr, double newGpa);`
- 3. `void printStudent(const char* name, const double& gpa);`
- 4. `double averageGPA(const double gpas[], int size);`
+   1. `void addStudent(char* name, double gpa, char* names[], double gpas[], int& size, int capacity);`
+   2. `void updateGPA(double* gpaPtr, double newGpa);`
+   3. `void printStudent(const char* name, const double& gpa);`
+   4. `double averageGPA(const double gpas[], int size);`
 3. In `main()`, implement a menu with switch and if/else. Always use braces for control flow statements.
 4. Use `static cast<int>` when printing the average GPA to show the rounded integer value.
 5. Catch exceptions for adding when full or computing average with no students, and print the error string.
